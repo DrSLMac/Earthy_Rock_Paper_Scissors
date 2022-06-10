@@ -2,6 +2,19 @@
     border: 1px solid red;
   }
 
-body {
+html {
+  background-image: url("assets/trees-background.jpg");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  height:fit-content ;
+  overflow: hidden;
+}  
 
+body {
+  display: flex;
+}
+
+.rock {
+  size: 50%;
 }
