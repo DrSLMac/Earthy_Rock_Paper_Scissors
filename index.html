@@ -3,29 +3,75 @@
     <meta charset="utf-8">
     <head>
       <link rel="stylesheet" href="styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
       <title>Rock 🪨, Paper 📄, Scissors ✂️</title>
     </head>
 <body> 
     <aside class="human-side">
-        <img class="human-token" src="assets/user.png"/>
+        <img class="players" src="assets/person1.png"/>
         <h3>Human</h3>
     </aside>
 
     <main>
-        <section>
+        <section class="title">
             <h1>Rock, Paper, Scissors</h1>
             <h2>The game of pure, unadulterated luck</h2>
-        </section>
-        <h3>CHOOSE YOUR GAME!</h3>
-        <section class="classic">
-            <h4>🪨 📄 ✂️ CLASSIC ✂️ 📄 🪨</h4>
-            <p><img class="rock" src="assets/rock.png"/> <img class="greater-than" src="assets/greater-than.png"/> <img src="assets/scissors.png"/></p>
-            <p></p>
-            <p></p>
+            <h3>CHOOSE YOUR GAME!</h3>
+        </section>        
+        <section class="game-options">
+            <button class="game-box">
+                <h4>🔥 🌏 🌊 CLASSIC 🌊 🌏 🔥</h4>
+                <section class="battle">
+                    <img class="elements" src="assets/element-fire.svg"/> 
+                    <img class="greater-than" src="assets/is-greater-than.png"/> 
+                    <img class="elements" src="assets/element-earth.svg"/>
+                </section>
+                <section class="battle">
+                    <img class="elements" src="assets/element-earth.svg"/> <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-water.svg"/>
+                </section>    
+                <section class="battle">
+                    <img class="elements" src="assets/element-water.svg"/> 
+                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-wind.svg"/>
+                </section>    
+                <section class="battle">
+                    <img class="elements" src="assets/element-wind.svg"/> 
+                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-fire.svg"/>
+                </section>    
+            </button>
+            <button class="game-box">
+                <h4>🔥 🌏 🌊 💨 ⚡️ CHALLENGE ⚡️ 💨 🌊 🌏 🔥</h4>
+                <section class="battle">
+                    <img class="elements" src="assets/element-fire.svg"/> 
+                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-earth.svg"/> 
+                    <img class="elements" src="assets/element-water.svg"/>
+                </section>  
+                <section class="battle">
+                    <img class="elements" src="assets/element-earth.svg"/> 
+                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-water.svg"/> 
+                    <img class="elements" src="assets/element-wind.svg"/>
+                </section>  
+                <section class="battle">
+                    <img class="elements" src="assets/element-water.svg"/> 
+                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-wind.svg"/> 
+                    <img class="elements" src="assets/element-ether.svg"/>
+                </section>  
+                <section class="battle">
+                    <img class="elements" src="assets/element-wind.svg"/> 
+                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-ether.svg"/> 
+                    <img class="elements" src="assets/element-fire.svg"/>
+                </section>  
+                <section class="battle">
+                    <img class="elements" src="assets/element-ether.svg"/> 
+                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-fire.svg"/> 
+                    <img class="elements" src="assets/element-earth.svg"/>
+                </section>  
+            </button>
         </section>
     </main>
     <aside class="computer-side">
-        <img src="assets/Vector-Laptop-Notebook-PNG-Transparent-Image.png"/>
+        <img class="players" src="assets/computer.png"/>
         <h3>Computer</h3>
     </aside>
 
