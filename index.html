@@ -9,20 +9,40 @@
       <title>Rock 🪨, Paper 📄, Scissors ✂️</title>
     </head>
 <body> 
+
+
+    <section class="player-intake hidden">
+        <section class="'choose-avatar">
+            <img class="avatar-icon" src='assets/person7.png' alt="curly">
+            <button class="change-avatar form-button">Choose Your Player</button>
+        </section>
+        <form class="make-player">
+            <div>
+                <input type="text" name="user" id="userNameInput" class="user-name" maxLength="12">
+                <labe for="userName">Please give your player a name 🖋</labe>
+            </div>
+            <button class="create-player form-button">Create your player</button>
+        </form>
+    </section>
+
+
     <aside class="human-side">
         <img class="players" src="assets/person1.png"/>
-        <h3>Human</h3>
+        <h3 class="human-decision">Human</h3>
         <p class="human-wins wins-calculator">Wins: 0</p>
+        <button class="change-game-button hidden" role="button">Change Game</button>
     </aside>
 
-    <main>
+    <main class="main-view">
         <section class="title">
             <h1>Rock, Paper, Scissors</h1>
-            <h2>The game of pure, unadulterated luck</h2>
-            <h3>CHOOSE YOUR GAME!</h3>
+            <h3>The game of pure, unadulterated luck</h3>
+            <h2 class="choose-game">🌳 CHOOSE YOUR GAME! 🌳</h2>
+            <h2 class="choose-weapon hidden">🍃 CHOOSE YOUR WEAPON! 🍃</h2>
+            <h2 class="result hidden">Show Result Here</h2>
         </section>        
         <section class="game-options">
-            <button class="game-box">
+            <button class="game-box classic-game-box">
                 <h4>🔥 🌏 🌊 CLASSIC 🌊 🌏 🔥</h4>
                 <section class="battle">
                     <img class="elements" src="assets/element-fire.svg"/> 
@@ -41,7 +61,7 @@
                     <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-fire.svg"/>
                 </section>    
             </button>
-            <button class="game-box">
+            <button class="game-box challenge-game-box">
                 <h4>🔥 🌏 🌊 💨 ⚡️ CHALLENGE ⚡️ 💨 🌊 🌏 🔥</h4>
                 <section class="battle">
                     <img class="elements" src="assets/element-fire.svg"/> 
@@ -70,10 +90,51 @@
                 </section>  
             </button>
         </section>
+        <div class="show-results hidden"></div>
+        <section class="classic-weapons hidden">
+            <img
+                class="classic-weapon-img icon"
+                id="fire"
+                data="classic challenge"
+                src="assets/element-fire.svg"
+                alt="fire element icon"
+            />
+            <img
+                class="classic-weapon-img icon"
+                id="earth"
+                data="classic challenge"
+                src="assets/element-earth.svg"
+                alt="earth element icon"
+            />
+            <img
+                class="classic-weapon-img icon"
+                id="water"
+                data="classic challenge"
+                src="assets/element-water.svg"
+                alt="water element icon"
+            />    
+        </section>
+
+        <section class="challenge-weapons hidden">
+            <img
+                class="classic-weapon-img icon"
+                id="wind"
+                data="classic challenge"
+                src="assets/element-wind.svg"
+                alt="wind element icon"
+            />
+            <img
+                class="classic-weapon-img icon"
+                id="ether"
+                data="classic challenge"
+                src="assets/element-ether.svg"
+                alt="ether element icon"
+            />
+        </section>
     </main>
     <aside class="computer-side">
         <img class="players" src="assets/computer.png"/>
-        <h3>Computer</h3>
+        <h3 class="computer-decision">Computer</h3>
         <p class="computer-wins wins-calculator">Wins: 0</p>
     </aside>
 

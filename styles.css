@@ -11,8 +11,33 @@ html {
   height: 100%;
 }
 
+.player-intake {
+  margin-top: 25%;
+  height: 600px;
+  display: flex;
+  /* flex-direction: column; */
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  border: solid;
+  border-radius: 8pt;
+  border-color: darkgray;
+  background-color: transparent;
+
+}
+
+.choose-avatar {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Acme', sans-serif;
+  font-size: 20pt;
+}
+
 body {
   display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 main {
@@ -26,7 +51,7 @@ main {
 
 .title {
   text-align: center;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 h1 {
@@ -51,6 +76,53 @@ aside {
 .wins-calculator {
   font-size: 24pt;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #207da4, 0 0 40px #273d84;
+}
+
+.change-game-button {
+  margin-top: 40%;
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Acme', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.change-game-button:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.change-game-button:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
 }
 
 .game-options{
@@ -108,33 +180,6 @@ button:hover {
   padding: 20px;
 }
 
-
-<!-- HTML !-->
-<button class="button-73" role="button">Button 73</button>
-
-/* CSS */
-.button-73 {
-  appearance: none;
-  background-color: #FFFFFF;
-  border-radius: 40em;
-  border-style: none;
-  box-shadow: #ADCFFF 0 -12px 6px inset;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -.24px;
-  margin: 0;
-  outline: none;
-  padding: 1rem 1.3rem;
-  quotes: auto;
-  text-align: center;
-  text-decoration: none;
-  transition: all .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+.hidden {
+  display: none;
 }
