@@ -7,21 +7,21 @@ var classicGameButton = document.querySelector(".classic-game-box");
 var challengeGameButton = document.querySelector(".challenge-game-box");
 var chooseGame = document.querySelector(".choose-game");
 var chooseYourWeapon = document.querySelector(".choose-weapon");
-var displayResults = document.querySelector(".result");
+var showResults = document.querySelector(".show-results");
 var classicWeapons = document.querySelector(".classic-weapons");
 var challengeWeapons = document.querySelector(".challenge-weapons");
 var icon = document.querySelector(".icon");
 var changeGameButton = document.querySelector(".change-game-button");
 var computerDecision = document.querySelector(".computer-decision");
 var humanDecision = document.querySelector(".human-decision");
-var showResults = document.querySelector(".show-results");
+var displayResults = document.querySelector(".result");
 var computerWins = document.querySelector(".computer-wins");
 var humanWins = document.querySelector(".human-wins");
 
 // 👇🏽 Event Listeners
 classicGameButton.addEventListener('click', goToClassicGame);
 challengeGameButton.addEventListener('click', goToChallengeGame);
-changeGameButton.addEventListener('click', returntoHomePage);
+changeGameButton.addEventListener('click', returnToHomePage);
 classicWeapons.addEventListener('click', playGame);
 challengeWeapons.addEventListener('click', playGame)
 
@@ -45,28 +45,36 @@ function returnToGame() {
 
 function goToClassicGame() {
     game.type = 'Classic';
+    showResults.classList.remove('hidden');
     displayResults.classList.add('hidden');
-    // hideElement(displayResults);
-    hideElement(showResults);
-    hideElement(chooseYourWeapon);
-    hideElement(gameOptions);
-    viewElement(chooseGame);
-    viewElement(classicWeapons);
-    viewElement(changeGameButton);
+    chooseYourWeapon.classList.remove('hidden');
+    gameOptions.classList.add('hidden');
+    chooseGame.classList.add('hidden');
+    classicWeapons.classList.remove('hidden');
+    changeGameButton.classList.remove('hidden');
+
     game.chooseWeapons();
 
 }
 
 function goToChallengeGame() {
     game.type = 'Challenge';
-    hideElement(displayResults);
-    hideElement(showResults);
-    hideElement(chooseYourWeapon);
-    hideElement(gameOptions);
-    viewElement(chooseGame);
-    viewElement(changeGameButton);
-    viewElement(classicWeapons);
-    viewElement(challengeWeapons);
+    showResults.classList.add('hidden');
+    displayResults.classList.add('hidden');
+    chooseYourWeapon.classList.add('hidden');
+    gameOptions.classList.add('hidden');
+    chooseGame.classList.remove('hidden');
+    classicWeapons.classList.remove('hidden');
+    changeGameButton.classList.remove('hidden');
+    // game.type = 'Challenge';
+    // hideElement(displayResults);
+    // hideElement(showResults);
+    // hideElement(chooseYourWeapon);
+    // hideElement(gameOptions);
+    // viewElement(chooseGame);
+    // viewElement(changeGameButton);
+    // viewElement(classicWeapons);
+    // viewElement(challengeWeapons);
     game.chooseWeapons();
 }
 
@@ -75,8 +83,8 @@ function viewChoices(humanDecision, computerDecision) {
     hideElement(classicWeapons);
     hideElement(challengeWeapons);
     viewElement(displayResults);
-    displayResults.innerHTML = "";
-    displayResults.innerHTML +=
+    showResults.innerHTML = "";
+    showResults.innerHTML +=
     `<section class="human-decision" id="humanDecision">
     <img id=${humanDecision} src='./assets/${humanDecision}.png' alt='${humanDecision} icon'>
   </section>
@@ -94,3 +102,11 @@ function viewChoices(humanDecision, computerDecision) {
 // function hideElement(element) {
 //     element.classList.add('hidden');
 // }
+
+    // hideElement(displayResults);
+    // hideElement(showResults);
+    // hideElement(chooseYourWeapon);
+    // hideElement(gameOptions);
+    // viewElement(chooseGame);
+    // viewElement(classicWeapons);
+    // viewElement(changeGameButton);
