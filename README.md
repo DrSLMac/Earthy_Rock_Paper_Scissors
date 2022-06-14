@@ -7,8 +7,16 @@ It's game time! Waste some time with this earthy twist on the classic game of ro
 ## Local Set-Up Instructions
 
 - Fork this repo
-- Clone the repo to your local machine
-- View the project in the browser by running open index.html in the terminal
+- Clone the repo to your local machine by copying the SSHA
+- In the terminal, run the following commands:
+
+```sh
+git clone git@github.com:DrSLMac/Rock-Paper-Scissors-Solo-Project.git
+cd Rock-Paper-Scissors-Solo-Project
+open index.html
+```
+
+- The game options will be appear on the load screen.
 
 ## Instructions for Use
 
@@ -43,7 +51,7 @@ This project features:
 
 ## Contributor
 
--[Shauna MacFarlane-Okongo](https://github.com/DrSLMac)
+- [Shauna MacFarlane-Okongo](https://github.com/DrSLMac)
 
 ## Image Credit
 
