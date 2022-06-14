@@ -6,7 +6,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-      <title>Rock 🪨, Paper 📄, Scissors ✂️</title>
+      <title> 🪨 Rock, 📄 Paper, ✂️ Scissors</title>
     </head>
 <body> 
 
@@ -31,15 +31,16 @@
         <h3 class="human-decision">Human</h3>
         <p class="human-wins wins-calculator">Wins: 0</p>
         <button class="change-game-button hidden" role="button">Change Game</button>
+        
     </aside>
 
     <main class="main-view">
         <section class="title">
-            <h1>Rock, Paper, Scissors</h1>
+            <h1>🍃 Battle of the Elements 🍃</h1>
             <h3>The game of pure, unadulterated luck</h3>
             <h2 class="choose-game">🌳 CHOOSE YOUR GAME! 🌳</h2>
-            <h2 class="choose-weapon hidden">🍃 CHOOSE YOUR WEAPON! 🍃</h2>
-            <h2 class="result hidden">Show Result Here</h2>
+            <h2 class="choose-weapon hidden">🍁 CHOOSE YOUR WEAPON! 🍁</h2>
+            <h2 class="result hidden"></h2>
         </section>        
         <section class="game-options">
             <button class="game-box classic-game-box">
@@ -54,10 +55,6 @@
                 </section>    
                 <section class="battle">
                     <img class="elements" src="assets/element-water.svg"/> 
-                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-wind.svg"/>
-                </section>    
-                <section class="battle">
-                    <img class="elements" src="assets/element-wind.svg"/> 
                     <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-fire.svg"/>
                 </section>    
             </button>
@@ -90,7 +87,7 @@
                 </section>  
             </button>
         </section>
-        <section class="show-results hidden">
+        <div class="show-results hidden"></div>
             <section class="classic-weapons hidden">
                 <img
                     class="classic-weapon-img icon"
@@ -131,12 +128,12 @@
                     alt="ether element icon"
                 />
             </section>
-        </section>  
     </main>
     <aside class="computer-side">
         <img class="players" src="assets/computer.png"/>
         <h3 class="computer-decision">Computer</h3>
         <p class="computer-wins wins-calculator">Wins: 0</p>
+        <button class="score-reset-button " role="button">Reset Score</button>
     </aside>
 
    
