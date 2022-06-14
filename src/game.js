@@ -2,7 +2,7 @@ class Game {
     constructor(gameChoice) {
         this.type = gameChoice;
         this.weapons = [];
-        this.human = new Player('Human', '🧘🏼');
+        this.human = new Player('Human', './assets/person1.png');
         this.computer = new Player('Computer', '💻');
         this.humanDecision = this.humanDecision;
         this.computerDecision = this.computerDecision;
@@ -45,5 +45,30 @@ class Game {
             this.winner = 'Computer';
         }
         viewChoices(this.humanDecision, this.computerDecision);
+    }
+
+    changeUserAvatar() {
+        if (this.human.token === `./assets/person1.png`) {
+            this.human.token = `./assets/person2.png`;
+        } else if (this.human.token === `./assets/person2.png`) {
+            this.human.token = `./assets/person3.png`;
+        } else if (this.human.token === `./assets/person3.png`) {
+            this.human.token = `./assets/person4.png`;
+        } else if (this.human.token === `./assets/person4.png`) {
+            this.human.token = `./assets/person5.png`;
+        } else if (this.human.token === `./assets/person5.png`) {
+            this.human.token = `./assets/person6.png`;
+        } else if (this.human.token === `./assets/person6.png`) {
+            this.human.token = `./assets/person7.png`;
+        } else if (this.human.token === `./assets/person7.png`) {
+            this.human.token = `./assets/person8.png`;
+        } else if (this.human.token === `./assets/person8.png`) {
+            this.human.token = `./assets/person1.png`;
+        } 
+    }
+
+    resetScore() {
+        this.human.wins = 0;
+        this.computer.wins = 0;
     }
 }
