@@ -53,7 +53,7 @@ aside {
 }
 
 /* 👇🏽 Change Icon Button*/
-.icon-button {
+.token-button {
   appearance: none;
   background-color: #c8e7f0;
   border-radius: 40em;
@@ -79,18 +79,18 @@ aside {
   touch-action: manipulation;
 }
 
-.icon-button:hover {
+.token-button:hover {
   background-color: #228564;
   box-shadow: #2b9b74 0 -6px 8px inset;
   transform: scale(1.125);
 }
 
-.icon-button:active {
+.token-button:active {
   transform: scale(1.025);
 }
 
 @media (min-width: 768px) {
-  .button-73 {
+  .token-button {
     font-size: 1.5rem;
     padding: .75rem 2rem;
   }

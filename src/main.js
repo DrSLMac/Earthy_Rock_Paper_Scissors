@@ -15,7 +15,7 @@ var computerWins = document.querySelector(".computer-wins");
 var displayResults = document.querySelector(".result");
 var humanDecision = document.querySelector(".human-decision");
 var humanWins = document.querySelector(".human-wins");
-var iconButton = document.querySelector(".icon-button");
+var tokenButton = document.querySelector(".token-button");
 var icon = document.querySelector(".icon");
 var scoreResetButton = document.querySelector(".score-reset-button");
 var showResults = document.querySelector(".show-results");
@@ -30,12 +30,16 @@ changeGameButton.addEventListener('click', returnToHomePage);
 classicGameButton.addEventListener('click', goToClassicGame);
 classicWeapons.addEventListener('click', playGame);
 challengeWeapons.addEventListener('click', playGame);
-iconButton.addEventListener('click', changeUserIcon);
+tokenButton.addEventListener('click', changeUserToken);
 scoreResetButton.addEventListener('click', resetScore);
 
 // 👇🏽 Functions 
 function viewElement(element) {
     element.classList.remove('hidden');
+}
+
+function hideElement(element) {
+    element.classList.add('hidden');
 }
 
 function init() {
@@ -48,10 +52,6 @@ function init() {
 }
 
 init();
-
-function hideElement(element) {
-    element.classList.add('hidden');
-}
 
 function classicGameView() {
     hideElement(showResults);
@@ -159,7 +159,7 @@ function returnToHomePage(event) {
     showResetScoreButton();
 }
 
-function changeUserIcon() {
+function changeUserToken() {
     game.changeUserAvatar();
     userIcon.src = game.human.token;
 }
