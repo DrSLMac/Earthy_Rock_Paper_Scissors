@@ -1,4 +1,5 @@
-# Rock-Paper-Scissors-Solo-Project 🔥 🌊 🌏
+# Fire, Water, Earth 🔥 🌊 🌏
+## An earthy version of Rock, Paper, Scissors
 
 ## Overview
 
