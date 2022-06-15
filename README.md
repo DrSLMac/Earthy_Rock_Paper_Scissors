@@ -35,6 +35,10 @@ open index.html
 - At any time, the player can choose another game by clicking the ```Change Game``` button.
 - The score can be reset by clicking the ```Reset Score``` button, or continue to build the score as player navigates between the two games. 
 
+## Deploy Link
+
+- Check out the game [here](https://drslmac.github.io/Rock-Paper-Scissors-Solo-Project/).
+
 ## Technologies Used
 
 - CSS
