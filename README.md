@@ -39,7 +39,7 @@ open index.html
 
 ## Deploy Link
 
-- Check out the game [here](https://drslmac.github.io/Earthy_Rock_Paper_Scissors/).
+- Coming Soon
 
 ## Technologies Used
 
@@ -62,6 +62,7 @@ This project features:
 - A local storage will be added to display user scores after the page loads.
 - Hover effects will be added on the game pages behind each weapon. 
 - A link will be added to deploy page directly from README.md.
+- A button to skip the intro page
 
 ## Project Management
 
