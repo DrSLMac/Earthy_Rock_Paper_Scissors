@@ -1,5 +1,6 @@
-# Fire, Water, Earth 🔥 🌊 🌏
-## An earthy version of Rock, Paper, Scissors
+# Fire 🔥  Water 🌊  Earth 🌏
+### An earthy version of Rock, Paper, Scissors
+
 
 ## Overview
 
