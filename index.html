@@ -7,74 +7,92 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
       <link href="./assets/favicon.ico" rel="icon" type="image/x-icon"/>
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
-    <!-- <link rel="manifest" href="/site.webmanifest"> -->
       <title>🔥 Fire, 🌏 Earth, 🌊 Water</title>
     </head>
 <body> 
 
-    <aside class="human-side">
-        <img class="players token" src="assets/person7.png"/>
-        <button class="icon-button" role="button">Change Tree Hugger</button>
-        <h3 class="human-decision">Human</h3>
-        <p class="human-wins wins-calculator">Wins: 0</p>
-        <button class="change-game-button hidden" role="button">Change Game</button>
-    </aside>
+    <div class="pre-loader" id="preloader">
+        <img class="loader" src="assets/preloader.svg">
+        <p>Welcome to the Battle of the Elements, an Earthy Version of the Classic Rock, Paper, Scissors Game!</p>
+        <p>🛋 Settle in and play awhile. 🪴</p>
+        <p>You can choose between the Classic or Challenge versions of the game.</p>
+        <p>If you choose the Classic Game, you will pick one of 3 elemental weapons:</p>
+        <p>🔥 Fire, 🌏 Earth, or 🌊 Water</p>
+        <p>🔥 Fire ~beats~ 🌏 Earth, 🌏 Earth ~beats~ 🌊 Water, and 🌊 Water ~beats~ 🔥 Fire</p>
+        <p>If you choose the Challenge Game, you will pick one of 5 elemental weapons:</p>
+        <p>🔥 Fire, 🌏 Earth, 🌊 Water, 💨 Wind, or ⚡️ Ether</p>
+        <p>🔥 Fire ~beats~ 🌏 Earth and 🌊 Water</p>
+        <p>🌏 Earth ~beats~ 🌊 Water and 💨 Wind</p>
+        <p>🌊 Water ~beats~ 💨 Wind and ⚡️ Ether</p>
+        <p>💨 Wind ~beats~ ⚡️ Ether and 🔥 Fire</p>
+        <p>⚡️ Ether ~beats~ 🔥 Fire and 🌏 Earth</p>
+    </div>
 
-    <main class="main-view">
-        <section class="title">
-            <h1>🍃 Battle of the Elements 🍃</h1>
-            <h3>The game of pure, unadulterated luck</h3>
-            <h2 class="choose-game">🌳 CHOOSE YOUR GAME! 🌳</h2>
-            <h2 class="choose-weapon hidden">🍁 CHOOSE YOUR WEAPON! 🍁</h2>
-            <h2 class="result hidden"></h2>
-        </section>        
-        <section class="game-options">
-            <button class="game-box classic-game-box">
-                <h4>🔥 🌏 🌊 CLASSIC 🌊 🌏 🔥</h4>
-                <section class="battle">
-                    <img class="elements" src="assets/element-fire.svg"/> 
-                    <img class="greater-than" src="assets/is-greater-than.png"/> 
-                    <img class="elements" src="assets/element-earth.svg"/>
-                </section>
-                <section class="battle">
-                    <img class="elements" src="assets/element-earth.svg"/> <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-water.svg"/>
-                </section>    
-                <section class="battle">
-                    <img class="elements" src="assets/element-water.svg"/> 
-                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-fire.svg"/>
-                </section>    
-            </button>
-            <button class="game-box challenge-game-box">
-                <h4>🔥 🌏 🌊 💨 ⚡️ CHALLENGE ⚡️ 💨 🌊 🌏 🔥</h4>
-                <section class="battle">
-                    <img class="elements" src="assets/element-fire.svg"/> 
-                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-earth.svg"/> 
-                    <img class="elements" src="assets/element-water.svg"/>
-                </section>  
-                <section class="battle">
-                    <img class="elements" src="assets/element-earth.svg"/> 
-                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-water.svg"/> 
-                    <img class="elements" src="assets/element-wind.svg"/>
-                </section>  
-                <section class="battle">
-                    <img class="elements" src="assets/element-water.svg"/> 
-                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-wind.svg"/> 
-                    <img class="elements" src="assets/element-ether.svg"/>
-                </section>  
-                <section class="battle">
-                    <img class="elements" src="assets/element-wind.svg"/> 
-                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-ether.svg"/> 
-                    <img class="elements" src="assets/element-fire.svg"/>
-                </section>  
-                <section class="battle">
-                    <img class="elements" src="assets/element-ether.svg"/> 
-                    <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-fire.svg"/> 
-                    <img class="elements" src="assets/element-earth.svg"/>
-                </section>  
-            </button>
-        </section>
+    <main class="main hidden">
+        <aside class="human-side">
+            <img class="players token" src="assets/person7.png"/>
+            <button class="icon-button" role="button">Change Tree Hugger</button>
+            <h3 class="human-decision">Human</h3>
+            <p class="human-wins wins-calculator">Wins: 0</p>
+            <button class="change-game-button hidden" role="button">Change Game</button>
+        </aside>
+
+        <section class="main-view">
+            <section class="title">
+                <h1>🍃 Battle of the Elements 🍃</h1>
+                <h3>The game of pure, unadulterated luck</h3>
+                <h2 class="choose-game">🌳 CHOOSE YOUR GAME! 🌳</h2>
+                <h2 class="choose-weapon hidden">🍁 CHOOSE YOUR WEAPON! 🍁</h2>
+                <h2 class="result hidden"></h2>
+            </section>
+
+            <section class="game-options">
+                <button class="game-box classic-game-box">
+                    <h4>🔥 🌏 🌊 CLASSIC 🌊 🌏 🔥</h4>
+                    <section class="battle">
+                        <img class="elements" src="assets/element-fire.svg"/> 
+                        <img class="greater-than" src="assets/is-greater-than.png"/> 
+                        <img class="elements" src="assets/element-earth.svg"/>
+                    </section>
+                    <section class="battle">
+                        <img class="elements" src="assets/element-earth.svg"/> <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-water.svg"/>
+                    </section>    
+                    <section class="battle">
+                        <img class="elements" src="assets/element-water.svg"/> 
+                        <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-fire.svg"/>
+                    </section>    
+                </button>
+
+                <button class="game-box challenge-game-box">
+                    <h4>🔥 🌏 🌊 💨 ⚡️ CHALLENGE ⚡️ 💨 🌊 🌏 🔥</h4>
+                    <section class="battle">
+                        <img class="elements" src="assets/element-fire.svg"/> 
+                        <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-earth.svg"/> 
+                        <img class="elements" src="assets/element-water.svg"/>
+                    </section>  
+                    <section class="battle">
+                        <img class="elements" src="assets/element-earth.svg"/> 
+                        <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-water.svg"/> 
+                        <img class="elements" src="assets/element-wind.svg"/>
+                    </section>  
+                    <section class="battle">
+                        <img class="elements" src="assets/element-water.svg"/> 
+                        <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-wind.svg"/> 
+                        <img class="elements" src="assets/element-ether.svg"/>
+                    </section>  
+                    <section class="battle">
+                        <img class="elements" src="assets/element-wind.svg"/> 
+                        <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-ether.svg"/> 
+                        <img class="elements" src="assets/element-fire.svg"/>
+                    </section>  
+                    <section class="battle">
+                        <img class="elements" src="assets/element-ether.svg"/> 
+                        <img class="greater-than" src="assets/is-greater-than.png"/> <img class="elements" src="assets/element-fire.svg"/> 
+                        <img class="elements" src="assets/element-earth.svg"/>
+                    </section>
+                </button>
+            </section>
+
         <div class="show-results hidden"></div>
             <section class="classic-weapons hidden">
                 <img
@@ -99,7 +117,6 @@
                     alt="water element icon"
                 />    
             </section>
-
             <section class="challenge-weapons hidden">
                 <img
                     class="classic-weapon-img icon"
@@ -116,15 +133,14 @@
                     alt="ether element icon"
                 />
             </section>
+        </section>
+        <aside class="computer-side">
+            <img class="players" src="assets/computer.png"/>
+            <h3 class="computer-decision">Computer</h3>
+            <p class="computer-wins wins-calculator">Wins: 0</p>
+            <button class="score-reset-button hidden" role="button">Reset Score</button>
+        </aside>
     </main>
-    <aside class="computer-side">
-        <img class="players" src="assets/computer.png"/>
-        <h3 class="computer-decision">Computer</h3>
-        <p class="computer-wins wins-calculator">Wins: 0</p>
-        <button class="score-reset-button hidden" role="button">Reset Score</button>
-    </aside>
-
-   
 </body>
 <script type="text/javascript" src="./src/player.js"></script>
 <script type="text/javascript" src="./src/game.js"></script>

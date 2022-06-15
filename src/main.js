@@ -19,8 +19,10 @@ var iconButton = document.querySelector(".icon-button");
 var icon = document.querySelector(".icon");
 var scoreResetButton = document.querySelector(".score-reset-button");
 var showResults = document.querySelector(".show-results");
-var userIcon = document.querySelector(".token")
-var winsCalculator = document.querySelector(".wins-calculator")
+var userIcon = document.querySelector(".token");
+var winsCalculator = document.querySelector(".wins-calculator");
+var loader = document.querySelector(".pre-loader");
+var main = document.querySelector(".main");
 
 // 👇🏽 Event Listeners
 challengeGameButton.addEventListener('click', goToChallengeGame);
@@ -32,6 +34,47 @@ iconButton.addEventListener('click', changeUserIcon);
 scoreResetButton.addEventListener('click', resetScore);
 
 // 👇🏽 Functions 
+function viewElement(element) {
+    element.classList.remove('hidden');
+}
+
+function init() {
+    setTimeout(() => {
+        loader.style.opacity = 0;
+        loader.style.display = 'none';
+        main.style.display = 'flex';
+        setTimeout(() => (main.style.opacity = 1), 2000);
+    }, 18000);
+}
+
+init();
+
+function hideElement(element) {
+    element.classList.add('hidden');
+}
+
+function classicGameView() {
+    hideElement(showResults);
+    hideElement(displayResults);
+    hideElement(gameOptions);
+    hideElement(chooseGame);
+    viewElement(chooseYourWeapon);
+    viewElement(classicWeapons);
+    viewElement(changeGameButton);
+}
+
+function goToClassicGame() {
+    game.type = 'Classic';
+    game.chooseWeapons();
+    classicGameView();
+}
+
+function goToChallengeGame() {
+    game.type = 'Challenge';
+    viewElement(challengeWeapons);
+    classicGameView();
+    game.chooseWeapons();
+}
 
 function playGame(event) {
     game.human.takeTurn(event);
@@ -40,39 +83,13 @@ function playGame(event) {
     game.determineWinner();
 }
 
-function goToClassicGame() {
-    game.type = 'Classic';
-    showResults.classList.add('hidden');
-    displayResults.classList.add('hidden');
-    chooseYourWeapon.classList.remove('hidden');
-    gameOptions.classList.add('hidden');
-    chooseGame.classList.add('hidden');
-    classicWeapons.classList.remove('hidden');
-    changeGameButton.classList.remove('hidden');
-    game.chooseWeapons();
-
-}
-
-function goToChallengeGame() {
-    game.type = 'Challenge';
-    showResults.classList.add('hidden');
-    displayResults.classList.add('hidden');
-    chooseYourWeapon.classList.remove('hidden');
-    gameOptions.classList.add('hidden');
-    chooseGame.classList.add('hidden');
-    classicWeapons.classList.remove('hidden');
-    challengeWeapons.classList.remove('hidden')
-    changeGameButton.classList.remove('hidden');
-    game.chooseWeapons();
-}
-
 function viewChoices(humanDecision, computerDecision) {
-    chooseGame.classList.add('hidden');
-    classicWeapons.classList.add('hidden');
-    challengeWeapons.classList.add('hidden');
-    displayResults.classList.remove('hidden');
-    chooseYourWeapon.classList.add('hidden');
-    showResults.classList.remove('hidden');
+    hideElement(chooseGame);
+    hideElement(classicWeapons);
+    hideElement(challengeWeapons);
+    hideElement(chooseYourWeapon);
+    viewElement(displayResults);
+    viewElement(showResults);
     showResults.innerHTML = "";
     showResults.innerHTML +=
     `<section class="choice humanDecision" id="humanDecision">
@@ -85,7 +102,7 @@ function viewChoices(humanDecision, computerDecision) {
 }
 
 function displayWinner() {
-    displayResults.classList.remove('hidden');
+    viewElement(displayResults);
     if (game.winner === "Human") {
         game.human.wins += 1;
         displayResults.innerText = " 🎊 🎉 🪅 HUMAN WINS! 🪅 🎉 🎊 ";
@@ -99,8 +116,8 @@ function displayWinner() {
     updateScore();
     returnToGame();
     showResetScoreButton();
-    classicWeapons.classList.add("hidden");
-    challengeWeapons.classList.add("hidden");
+    hideElement(classicWeapons);
+    hideElement(challengeWeapons);
 }
 
 function updateScore() {
@@ -117,30 +134,28 @@ function returnToGame() {
 }
 
 function showResetScoreButton() {
-    console.log(game.human.wins);
-    console.log(game.computer.wins);
     if (game.human.wins === 0 && game.computer.wins === 0) {
-        scoreResetButton.classList.add("hidden");
+        hideElement(scoreResetButton);
     } else {
-    scoreResetButton.classList.remove('hidden');
+        viewElement(scoreResetButton);
     }
 }
 
 function resetScore() {
     game.resetScore();
     updateScore();
-    scoreResetButton.classList.add('hidden');
+    hideElement(scoreResetButton);
 }
 
 function returnToHomePage(event) {
     event.preventDefault();
-    showResults.classList.add('hidden');
-    changeGameButton.classList.add('hidden');
-    classicWeapons.classList.add('hidden');
-    challengeWeapons.classList.add('hidden');
-    gameOptions.classList.remove('hidden')
-    chooseYourWeapon.classList.add('hidden');
-    chooseGame.classList.remove('hidden');
+    hideElement(showResults);
+    hideElement(changeGameButton);
+    hideElement(classicWeapons);
+    hideElement(challengeWeapons);
+    hideElement(chooseYourWeapon);
+    viewElement(gameOptions);
+    viewElement(chooseGame);
     showResetScoreButton();
 }
 
