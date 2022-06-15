@@ -39,7 +39,7 @@ open index.html
 
 ## Deploy Link
 
-- Check out the game [here](https://drslmac.github.io/Rock-Paper-Scissors-Solo-Project/).
+- Check out the game [here](https://drslmac.github.io/Earthy_Rock_Paper_Scissors/).
 
 ## Technologies Used
 
