@@ -39,7 +39,7 @@ open index.html
 
 ## Deploy Link
 
-- Coming Soon
+- Click [here](https://drslmac.github.io/Earthy_Rock_Paper_Scissors/) to play the game. 
 
 ## Technologies Used
 
@@ -61,8 +61,6 @@ This project features:
 - Adding in the ability for each user to input their name as the "Human" player.
 - A local storage will be added to display user scores after the page loads.
 - Hover effects will be added on the game pages behind each weapon. 
-- A link will be added to deploy page directly from README.md.
-- A button to skip the intro page
 
 ## Project Management
 
