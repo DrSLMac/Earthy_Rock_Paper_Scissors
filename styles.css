@@ -53,7 +53,7 @@ aside {
 }
 
 /* 👇🏽 Change Icon Button*/
-.token-button {
+.token-button, .skip-intro {
   appearance: none;
   background-color: #c8e7f0;
   border-radius: 40em;
@@ -107,6 +107,7 @@ aside {
   font-size: 24pt;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #207da4, 0 0 40px #273d84;
 }
+
 
 .change-game-button, .score-reset-button {
   margin-top: 40%;

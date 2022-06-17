@@ -23,6 +23,7 @@ var userIcon = document.querySelector(".token");
 var winsCalculator = document.querySelector(".wins-calculator");
 var loader = document.querySelector(".pre-loader");
 var main = document.querySelector(".main");
+var skipIntro = document.querySelector(".skip-intro");
 
 // 👇🏽 Event Listeners
 challengeGameButton.addEventListener('click', goToChallengeGame);
@@ -32,6 +33,7 @@ classicWeapons.addEventListener('click', playGame);
 challengeWeapons.addEventListener('click', playGame);
 tokenButton.addEventListener('click', changeUserToken);
 scoreResetButton.addEventListener('click', resetScore);
+skipIntro.addEventListener('click', skipTheIntro);
 
 // 👇🏽 Functions 
 function viewElement(element) {
@@ -52,6 +54,13 @@ function init() {
 }
 
 init();
+
+function skipTheIntro() {
+    loader.style.opacity = 0;
+    loader.style.display = 'none';
+    main.style.display = 'flex';
+    // returnToHomePage();
+}
 
 function classicGameView() {
     hideElement(showResults);
